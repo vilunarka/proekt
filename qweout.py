@@ -101,8 +101,6 @@ class Ui_MainWindow(object):
 
         self.null_freqs_input = QLineEdit()
         self.null_freqs_input.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        self.left_layout.addWidget(QLabel("Обнулить амплитуду на частотах (через запятую):"))
-        self.left_layout.addWidget(self.null_freqs_input)
 
         self.null_points_layout = QHBoxLayout()
         self.null_points_label = QLabel("Сколько точек обнулить в начале спектра:")

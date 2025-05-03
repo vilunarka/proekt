@@ -15,7 +15,6 @@ class SpectralAnalyzer(QMainWindow, Ui_MainWindow):
         self.data = None
         self.autocorr_enabled = False
 
-        # Инициализация значений по умолчанию
         self.time_step_spin.setValue(1.0)
         self.freq_min_spin.setRange(0, 10000)
         self.freq_min_spin.setValue(0)
@@ -23,22 +22,19 @@ class SpectralAnalyzer(QMainWindow, Ui_MainWindow):
         self.freq_max_spin.setValue(100)
         self.null_points_spin.setValue(0)
         
-        # Заполнение выпадающих списков
         self.component_combo.addItems(["x-компонент", "y-компонент", "z-компонент", "Модуль"])
         self.color_combo.addItems(["blue", "red", "green", "black", "magenta", "cyan", "yellow", "purple"])
         self.window_combo.addItems(["None", "Hann", "Hamming", "Blackman"])
         self.style_combo.addItems(["Линия", "Точки", "Шаги", "Столбцы"])
         
-        # Подписи осей
         self.xlabel_input.setText("Частота (см⁻¹)")
         self.ylabel_input.setText("Интенсивность")
 
-        # Подключение сигналов
         self.file_button.clicked.connect(self.load_data)
         self.save_button.clicked.connect(self.save_plot)
         self.autocorr_button.clicked.connect(self.toggle_autocorrelation)
         
-        # Подключение сигналов изменений параметров
+
         self.connect_parameter_signals()
 
     def connect_parameter_signals(self):
@@ -134,7 +130,6 @@ class SpectralAnalyzer(QMainWindow, Ui_MainWindow):
             if null_count > 0:
                 fft_vals[:null_count] = 0
 
-            # Обнуление указанных частот
             null_freqs_text = self.null_freqs_input.text().strip()
             if null_freqs_text:
                 try:
@@ -149,7 +144,6 @@ class SpectralAnalyzer(QMainWindow, Ui_MainWindow):
             ax = self.figure.add_subplot(111)
             mask = (freqs >= freq_min) & (freqs <= freq_max)
             
-            # Выбор стиля графика
             if plot_style == "Линия":
                 ax.plot(freqs[mask], fft_vals[mask], color=color)
             elif plot_style == "Точки":

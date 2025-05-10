@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1156</width>
+    <height>1023</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Анализатор спектра</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QWidget" name="widget_11" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>800</width>
+           <height>600</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QGraphicsView" name="figure"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>360</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="leftMargin">
+              <number>9</number>
+             </property>
+             <property name="rightMargin">
+              <number>9</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QGroupBox" name="groupBox_3">
+               <property name="title">
+                <string>Параметры</string>
+               </property>
+               <widget class="QWidget" name="layoutWidget">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>20</y>
+                  <width>931</width>
+                  <height>311</height>
+                 </rect>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_2">
+                 <item>
+                  <widget class="QWidget" name="widget_13" native="true">
+                   <widget class="QLabel" name="label">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>0</y>
+                      <width>121</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Компоненты:</string>
+                    </property>
+                   </widget>
+                   <widget class="QComboBox" name="component_combo">
+                    <property name="geometry">
+                     <rect>
+                      <x>190</x>
+                      <y>0</y>
+                      <width>91</width>
+                      <height>22</height>
+                     </rect>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_8" native="true">
+                   <widget class="QLabel" name="label_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>0</y>
+                      <width>111</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Шаг времени (фс):</string>
+                    </property>
+                   </widget>
+                   <widget class="QSpinBox" name="time_step_spin">
+                    <property name="geometry">
+                     <rect>
+                      <x>190</x>
+                      <y>0</y>
+                      <width>91</width>
+                      <height>22</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_3" native="true">
+                   <widget class="QLabel" name="label_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>0</y>
+                      <width>141</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Диапозон частот: (см⁻¹):</string>
+                    </property>
+                   </widget>
+                   <widget class="QSpinBox" name="freq_min_spin">
+                    <property name="geometry">
+                     <rect>
+                      <x>190</x>
+                      <y>0</y>
+                      <width>91</width>
+                      <height>22</height>
+                     </rect>
+                    </property>
+                   </widget>
+                   <widget class="QSpinBox" name="freq_max_spin">
+                    <property name="geometry">
+                     <rect>
+                      <x>310</x>
+                      <y>0</y>
+                      <width>91</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="label_10">
+                    <property name="geometry">
+                     <rect>
+                      <x>290</x>
+                      <y>0</y>
+                      <width>51</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>до</string>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_10" native="true">
+                   <widget class="QLabel" name="label_4">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>0</y>
+                      <width>121</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Цвет графика:</string>
+                    </property>
+                   </widget>
+                   <widget class="QComboBox" name="color_combo">
+                    <property name="geometry">
+                     <rect>
+                      <x>190</x>
+                      <y>0</y>
+                      <width>91</width>
+                      <height>22</height>
+                     </rect>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_4" native="true">
+                   <widget class="QLabel" name="label_5">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>0</y>
+                      <width>101</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Подпись оси X:</string>
+                    </property>
+                   </widget>
+                   <widget class="QLineEdit" name="xlabel_input">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>0</y>
+                      <width>421</width>
+                      <height>20</height>
+                     </rect>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_6" native="true">
+                   <widget class="QLabel" name="label_9">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>0</y>
+                      <width>131</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Подпись оси Y:</string>
+                    </property>
+                   </widget>
+                   <widget class="QLineEdit" name="ylabel_input">
+                    <property name="geometry">
+                     <rect>
+                      <x>110</x>
+                      <y>0</y>
+                      <width>421</width>
+                      <height>20</height>
+                     </rect>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_5" native="true">
+                   <widget class="QLabel" name="label_6">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>10</y>
+                      <width>47</width>
+                      <height>13</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="label_11">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>0</y>
+                      <width>101</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Оконная функция:</string>
+                    </property>
+                   </widget>
+                   <widget class="QComboBox" name="window_combo">
+                    <property name="geometry">
+                     <rect>
+                      <x>130</x>
+                      <y>0</y>
+                      <width>91</width>
+                      <height>22</height>
+                     </rect>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_9" native="true">
+                   <widget class="QLabel" name="label_12">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>0</y>
+                      <width>101</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Автокорреляция:</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="autocorr_button">
+                    <property name="geometry">
+                     <rect>
+                      <x>130</x>
+                      <y>0</y>
+                      <width>91</width>
+                      <height>23</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton:hover {
+    background-color: rgb(100, 100, 100);  
+    border: 1px solid rgb(80, 80, 80);
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 50, 50);  
+    border: 1px solid rgb(30, 30, 30);
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Вкл/Выкл</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_7" native="true">
+                   <widget class="QLabel" name="label_7">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>0</y>
+                      <width>101</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Значение DPI:</string>
+                    </property>
+                   </widget>
+                   <widget class="QLineEdit" name="dpi_spin">
+                    <property name="geometry">
+                     <rect>
+                      <x>130</x>
+                      <y>0</y>
+                      <width>91</width>
+                      <height>20</height>
+                     </rect>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_14" native="true">
+                   <widget class="QLabel" name="label_8">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>0</y>
+                      <width>251</width>
+                      <height>16</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Сколько точек обнулить в начале спектра:</string>
+                    </property>
+                   </widget>
+                   <widget class="QSpinBox" name="null_points_spin">
+                    <property name="geometry">
+                     <rect>
+                      <x>261</x>
+                      <y>0</y>
+                      <width>101</width>
+                      <height>22</height>
+                     </rect>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="groupBox">
+               <property name="maximumSize">
+                <size>
+                 <width>180</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="title">
+                <string>Действия</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout">
+                  <item>
+                   <spacer name="verticalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="file_button">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton:hover {
+    background-color: rgb(100, 100, 100);  
+    border: 1px solid rgb(80, 80, 80);
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 50, 50);  
+    border: 1px solid rgb(30, 30, 30);
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Загрузить файл</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="plt_btn">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton:hover {
+    background-color: rgb(100, 100, 100);  
+    border: 1px solid rgb(80, 80, 80);
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 50, 50);  
+    border: 1px solid rgb(30, 30, 30);
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Построить график</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="save_button">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton:hover {
+    background-color: rgb(100, 100, 100);  
+    border: 1px solid rgb(80, 80, 80);
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 50, 50);  
+    border: 1px solid rgb(30, 30, 30);
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Сохранить график</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

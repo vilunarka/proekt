@@ -3,7 +3,7 @@ import numpy as np
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QTimer
 import matplotlib.pyplot as plt
-from ui import Ui_MainWindow
+from ui import Ui_mainWindow
 from scipy.fft import fft, fftfreq
 from scipy.signal import correlate
 from matplotlib.figure import Figure
@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
 
-class SpectralAnalyzer(QMainWindow, Ui_MainWindow):
+class SpectralAnalyzer(QMainWindow, Ui_mainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)

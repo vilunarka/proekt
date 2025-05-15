@@ -185,12 +185,16 @@ class SpectralAnalyzer(QMainWindow, Ui_mainWindow):
         file_path, _ = QFileDialog.getSaveFileName(
             self, "Сохранить график", "",
             "PNG (*.png);;JPEG (*.jpg);;PDF (*.pdf);;SVG (*.svg)")
+        # print(file_path)
+        mydpi = int(self.dpi_spin.value())
+        # print(mydpi)
 
         if file_path:
             try:
-                dpi = self.dpi_spin.value()
-                self.figure.savefig(file_path, dpi=dpi, bbox_inches='tight')
-                self.statusBar().showMessage(f"Сохранено (DPI: {dpi})")
+                # mydpi = int(self.dpi_spin.value())
+                # print(mydpi)
+                self.figure.savefig(file_path, dpi=int(mydpi), bbox_inches='tight')
+                self.statusBar().showMessage(f"Сохранено (DPI: {mydpi})")
             except Exception as e:
                 self.statusBar().showMessage(f"Ошибка: {str(e)}")
 

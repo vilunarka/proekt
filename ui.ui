@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1156</width>
-    <height>1023</height>
+    <width>948</width>
+    <height>1039</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,8 +22,8 @@
         <widget class="QWidget" name="widget" native="true">
          <property name="minimumSize">
           <size>
-           <width>800</width>
-           <height>600</height>
+           <width>640</width>
+           <height>480</height>
           </size>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -389,14 +389,23 @@ QPushButton:pressed {
                      <string>Значение DPI:</string>
                     </property>
                    </widget>
-                   <widget class="QLineEdit" name="dpi_spin">
+                   <widget class="QSpinBox" name="dpi_spin">
                     <property name="geometry">
                      <rect>
                       <x>130</x>
                       <y>0</y>
-                      <width>91</width>
-                      <height>20</height>
+                      <width>111</width>
+                      <height>24</height>
                      </rect>
+                    </property>
+                    <property name="minimum">
+                     <number>300</number>
+                    </property>
+                    <property name="maximum">
+                     <number>1200</number>
+                    </property>
+                    <property name="singleStep">
+                     <number>300</number>
                     </property>
                    </widget>
                   </widget>
@@ -461,7 +470,7 @@ QPushButton:pressed {
                   <item>
                    <spacer name="verticalSpacer">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Vertical</enum>
+                     <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
